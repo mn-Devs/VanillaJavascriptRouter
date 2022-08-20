@@ -1,6 +1,6 @@
 # VanillaJavascriptRouter(VJR)
 ## How does it work
-It creates a sessionStorage object for the current page that you visited and refreshes the page.
+It creates a `sessionStorage` object for the current page that you visited and refreshes the page.
 
 Then it will look witch assets are associated with the requested page.
 
@@ -35,4 +35,12 @@ The url does NOT change.
 The router works with a string that is saved in `sessionStorage`
 
 And you need to upload the files to a (local)webserver.
-Otherwise it won't work
+Otherwise it won't work.
+
+# Found an improvement?
+Please create a issue, Thanks
+
+# Used Resources:
+[thedevdrawer](https://github.com/thedevdrawer/spa-routing)
+For creating and explaining the basics of routing
+
