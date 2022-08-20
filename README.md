@@ -44,3 +44,5 @@ Please create a issue, Thanks
 [thedevdrawer](https://github.com/thedevdrawer/spa-routing)
 For creating and explaining the basics of routing
 
+# Demo:
+[link](https://cdn.mndevs.host/routing/)
