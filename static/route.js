@@ -1,6 +1,7 @@
 let app_div = document.getElementById('app');
 const urlPageTitle = "mnDevs VJR";
 
+
 const urlRoutes = {
 	"dashboard": {
 		template: "templates/dashboard.html",
@@ -50,8 +51,8 @@ const urlRoutes = {
 };
 
 const router = async () => {
-	const pagelocation = sessionStorage.getItem('page')
-		//set the sessions page to homepage if no page is set
+	 const pagelocation = await sessionStorage.getItem('page');
+	//set the sessions page to homepage if no page is set
 
 	if (pagelocation === null) {
 		sessionStorage.setItem('page', 'home')
@@ -70,13 +71,13 @@ const router = async () => {
 
 	const headerscript = document.createElement("script");
 	headerscript.src = route.headerscript;
-				//get the style file for the page
+	//get the style file for the page
 
 	const css = document.createElement("link");
 	css.rel = "stylesheet";
 	css.href = route.style;
 
-			//append all the assets to the page
+	//append all the assets to the page
 
 	app_div.innerHTML = header + html;
 	document.head.appendChild(script);
@@ -88,8 +89,9 @@ const router = async () => {
 
 //function for changing the page
 
-const changePage = (page)=> {
+const changePage = (page) => {
 	sessionStorage.setItem('page', page);
-	location.reload();
+	router();
 }
+
 window.onload = router();
